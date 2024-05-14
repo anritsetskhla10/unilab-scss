@@ -1,0 +1,46 @@
+
+@import 'config.scss';
+
+$firstcolor: black;
+$mysize: 300px;
+$primaryWidth:100%;
+
+body{
+    background-color: gray;
+    color: $firstcolor;
+}
+
+.container{
+    width: $primaryWidth;
+    background-color: $primaryColor;
+    padding: 40px;
+
+    &.element{
+        color: #fff;
+    }
+
+    @media (min-width:1440px) {
+        width:$primaryWidth - $mysize ;
+    }
+
+    h1{
+        color: $myColor;
+       font-size: $myFontSize;
+       font-weight: $fontWeight;
+    }
+
+    p{
+        @include myFont(#fff, 20px);
+        font-weight: 500;
+    }
+
+    button{
+        @include myButton;
+        background-color: orange;
+        color: black;
+    }
+
+    span{
+        @extend %defaultFont;
+    }
+}

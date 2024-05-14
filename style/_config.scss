@@ -1,0 +1,29 @@
+
+
+$primaryColor: blue;
+$myColor: red;
+
+$myFontSize: 30px;
+$fontWeight: bold;
+
+
+@mixin myButton{
+    width: 300px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+@mixin myFont($color, $size ){
+    font-size: $size;
+    color: $color;
+}
+
+
+%defaultFont{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+}
